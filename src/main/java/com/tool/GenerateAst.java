@@ -70,7 +70,7 @@ public class GenerateAst {
         writer.println("    <R> R accept(Visitor<R> visitor) {");
         writer.println("      return visitor.visit" +
                 className + baseName + "(this);");
-        writer.println("    ;");
+        writer.println("    }");
 
         // fields
         writer.println();
@@ -78,7 +78,7 @@ public class GenerateAst {
             writer.println("    final " + field + ";");
         }
 
-        writer.println("    }");
+        writer.println("  }");
         writer.println();
     }
 
